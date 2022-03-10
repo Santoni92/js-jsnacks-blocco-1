@@ -16,4 +16,24 @@ if(!isNaN(numeroInserito))
     console.log('la somma di tutte le cifre che compongono il numero risulta:',somma);
 }
 /*oppure potrei salvare i vari dati ottenuti per la variabile numeroParziale in un array e successivamente fare la somma 
-di tutti gli elementi di quest'array*/
+di tutti gli elementi di quest'array (notare che comunque dovrei utilizzare una variaible che memorizzi la somma)*/
+/*
+let numeroInserito = parseInt(prompt('Inserisci numero'));
+let numeroParziale = 0;
+let somma = 0;
+const arrayCifre = [];
+if(!isNaN(numeroInserito))
+{
+    for(let i = 3; i >= 0; i--)
+    {
+        numeroParziale = Math.trunc(numeroInserito / Math.pow(10,i));
+        arrayCifre.push(numeroParziale);
+        numeroInserito = numeroInserito - (numeroParziale * Math.pow(10,i));
+
+    }
+    for(let i = 0; i < arrayCifre.length; i++){
+        somma += arrayCifre[i];
+    }
+    console.log('la somma di tutte le cifre che compongono il numero risulta:',somma);
+}
+*/
