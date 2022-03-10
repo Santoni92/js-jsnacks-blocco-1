@@ -13,14 +13,18 @@ const numberArray = [];
  for(let i = 0; i < 6; i++)
 {
     const numeroInserito =  parseInt(prompt('Inserisci un numero intero'));
-    if(numeroInserito % 2 !== 0)
+    if(!isNaN(numeroInserito))
     {
-        numberArray.push(numeroInserito);
+        if(numeroInserito % 2 !== 0)
+        {
+            numberArray.push(numeroInserito);
+        }
     }
 }
 
 for(let i = 0; i< numberArray.length;i++)
 {
-    document.writeln(numberArray[i]);
+    //document.writeln(numberArray[i]);
+    console.log(numberArray[i]);
 }
 
