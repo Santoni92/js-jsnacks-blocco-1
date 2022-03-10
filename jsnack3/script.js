@@ -6,7 +6,6 @@ let numeroParziale = 0;
 let somma = 0;
 if(!isNaN(numeroInserito))
 {
-    //console.log(numeroInserito / 1000);
     for(let i = 3; i >= 0; i--)
     {
         numeroParziale = Math.trunc(numeroInserito / Math.pow(10,i));
@@ -14,7 +13,7 @@ if(!isNaN(numeroInserito))
         numeroInserito = numeroInserito - (numeroParziale * Math.pow(10,i));
 
     }
-    console.log(somma);
+    console.log('la somma di tutte le cifre che compongono il numero risulta:',somma);
 }
 /*oppure potrei salvare i vari dati ottenuti per la variabile numeroParziale in un array e successivamente fare la somma 
 di tutti gli elementi di quest'array*/
