@@ -20,7 +20,7 @@ e comunicagli se può partecipare o no alla festa.*/
 //      ALLORA scrivi 'puoi partecipare'
 //      ALTRIMENTI scrivi 'non puoi partecipare'
 
-console.log('JS OK');   //controllo che lo script js sia collegato all'html
+console.log('JS OK!');   //controllo che lo script js sia collegato all'html
 const elencoInvitati = ["silvio","paolo","luca","stefano","marcello"];  //inizializzo l'array dei nomi degli invitati
 
 document.getElementById('insertNameButton').addEventListener('click',function()

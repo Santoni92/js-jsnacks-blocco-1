@@ -9,6 +9,8 @@
 //      FINE SE
 //RIPETI
 
+console.log('JS OK!');
+
 const numberArray = [];
  for(let i = 0; i < 6; i++)
 {
