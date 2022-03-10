@@ -30,7 +30,11 @@ if(nomeUtente)
 {
     for(let i= 0; i < elencoInvitati.length; i++){
         const validName = elencoInvitati[i];
-        if(nomeUtente.trim().toLowerCase() === validName){
+        if(nomeUtente.trim().toLowerCase() === validName){  /*faccio uso della funzione trim() la quale elimina eventuali spazi inseriti alla fine
+                                                              o all'inizio della stringa inserita dall'utente;questa funzione mi restituisce
+                                                              una stringa sulla quale a sua volta vado a richiamare il metodo toLowerCase così
+                                                              da trasformare tutto in minuscolo la stringa inserita dall'utente( e mettermi al
+                                                              sicuro da eventuali lettere maiusco o minuscole inserite nel nome dall'utente)*/
             checkDelNome = true;
         }
     }
