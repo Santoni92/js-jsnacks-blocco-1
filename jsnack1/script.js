@@ -23,28 +23,35 @@ e comunicagli se può partecipare o no alla festa.*/
 console.log('JS OK');   //controllo che lo script js sia collegato all'html
 const elencoInvitati = ["silvio","paolo","luca","stefano","marcello"];  //inizializzo l'array dei nomi degli invitati
 
-let checkDelNome = false;   //variabile d'appoggio  booleana che mi servirà per valutare quale dei due messsaggi stampare
-const nomeUtente = prompt('Inserisci il tuo nome');
-
-if(nomeUtente)
+document.getElementById('insertNameButton').addEventListener('click',function()
 {
-    for(let i= 0; i < elencoInvitati.length; i++){
-        const validName = elencoInvitati[i];
-        if(nomeUtente.trim().toLowerCase() === validName){  /*faccio uso della funzione trim() la quale elimina eventuali spazi inseriti alla fine
-                                                              o all'inizio della stringa inserita dall'utente;questa funzione mi restituisce
-                                                              una stringa sulla quale a sua volta vado a richiamare il metodo toLowerCase così
-                                                              da trasformare tutto in minuscolo la stringa inserita dall'utente( e mettermi al
-                                                              sicuro da eventuali lettere maiusco o minuscole inserite nel nome dall'utente)*/
-            checkDelNome = true;
-        }
+    let checkDelNome = false;    //variabile d'appoggio  booleana che mi servirà per valutare quale dei due messsaggi stampare
+    const nomeUtente = prompt('Inserisci il tuo nome');
+    if(nomeUtente)
+    {
+        for(let i= 0; i < elencoInvitati.length; i++){
+             const validName = elencoInvitati[i];
+              /*faccio uso della funzione trim() la quale elimina eventuali spazi inseriti alla fine
+              o all'inizio della stringa inserita dall'utente;questa funzione mi restituisce
+              una stringa sulla quale a sua volta vado a richiamare il metodo toLowerCase così
+              da trasformare tutto in minuscolo la stringa inserita dall'utente( e mettermi al
+              sicuro da eventuali lettere maiusco o minuscole inserite nel nome dall'utente)*/                 
+             if(nomeUtente.trim().toLowerCase() === validName) 
+              {                                                                                                                    
+                 checkDelNome = true;
+              }
+         }
     }
+    if(checkDelNome)
+    {
+        prompt('Puoi partecipare alla festa!!!');
+    }
+    else{
+            prompt("Il tuo nome non é nell'elenco degli invitati, mi dispiace ma non puoi partecipare alla festa!!!");
+        }
+
 }
+);
 
 
-if(checkDelNome)
-{
-    prompt('Puoi partecipare alla festa!!!');
-}else{
-    prompt("Il tuo nome non é nell'elenco degli invitati, mi dispiace ma non puoi partecipare alla festa!!!");
-}
-
+//versione con inserimento del nome da parte dell'utente via tag input
