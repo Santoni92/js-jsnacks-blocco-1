@@ -21,6 +21,6 @@ const numberArray = [];
 
 for(let i = 0; i< numberArray.length;i++)
 {
-    document.write(numberArray[i]);
+    document.writeln(numberArray[i]);
 }
 
