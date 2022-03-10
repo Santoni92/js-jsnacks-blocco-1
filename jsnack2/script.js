@@ -24,7 +24,6 @@ const numberArray = [];
 
 for(let i = 0; i< numberArray.length;i++)
 {
-    //document.writeln(numberArray[i]);
     console.log(numberArray[i]);
 }
 
